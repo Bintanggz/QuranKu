@@ -1,0 +1,29 @@
+{
+  "number": 110,
+  "name": "An-Nasr",
+  "arabicName": "سُورَةُ النَّصۡرِ",
+  "meaning": "Pertolongan",
+  "revelation": "MEDINAN",
+  "totalAyah": 3,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+      "translation": "Apabila telah datang pertolongan Allah dan kemenangan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/110001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا",
+      "translation": "dan kamu lihat manusia masuk agama Allah dengan berbondong-bondong,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/110002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+      "translation": "maka bertasbihlah dengan memuji Tuhanmu dan mohonlah ampun kepada-Nya. Sesungguhnya Dia adalah Maha Penerima taubat.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/110003.mp3"
+    }
+  ]
+}

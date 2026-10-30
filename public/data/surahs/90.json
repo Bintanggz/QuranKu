@@ -1,0 +1,131 @@
+{
+  "number": 90,
+  "name": "Al-Balad",
+  "arabicName": "سُورَةُ البَلَدِ",
+  "meaning": "Negeri",
+  "revelation": "MECCAN",
+  "totalAyah": 20,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ",
+      "translation": "Aku benar-benar bersumpah dengan kota ini (Mekah),",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "وَأَنتَ حِلٌّۢ بِهَٰذَا ٱلْبَلَدِ",
+      "translation": "dan kamu (Muhammad) bertempat di kota Mekah ini,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "وَوَالِدٍۢ وَمَا وَلَدَ",
+      "translation": "dan demi bapak dan anaknya.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَ فِى كَبَدٍ",
+      "translation": "Sesungguhnya Kami telah menciptakan manusia berada dalam susah payah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌۭ",
+      "translation": "Apakah manusia itu menyangka bahwa sekali-kali tiada seorangpun yang berkuasa atasnya?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "يَقُولُ أَهْلَكْتُ مَالًۭا لُّبَدًا",
+      "translation": "Dan mengatakan: \"Aku telah menghabiskan harta yang banyak\".",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090006.mp3"
+    },
+    {
+      "number": 7,
+      "text": "أَيَحْسَبُ أَن لَّمْ يَرَهُۥٓ أَحَدٌ",
+      "translation": "Apakah dia menyangka bahwa tiada seorangpun yang melihatnya?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090007.mp3"
+    },
+    {
+      "number": 8,
+      "text": "أَلَمْ نَجْعَل لَّهُۥ عَيْنَيْنِ",
+      "translation": "Bukankah Kami telah memberikan kepadanya dua buah mata,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090008.mp3"
+    },
+    {
+      "number": 9,
+      "text": "وَلِسَانًۭا وَشَفَتَيْنِ",
+      "translation": "lidah dan dua buah bibir.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090009.mp3"
+    },
+    {
+      "number": 10,
+      "text": "وَهَدَيْنَٰهُ ٱلنَّجْدَيْنِ",
+      "translation": "Dan Kami telah menunjukkan kepadanya dua jalan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090010.mp3"
+    },
+    {
+      "number": 11,
+      "text": "فَلَا ٱقْتَحَمَ ٱلْعَقَبَةَ",
+      "translation": "Tetapi dia tiada menempuh jalan yang mendaki lagi sukar.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090011.mp3"
+    },
+    {
+      "number": 12,
+      "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْعَقَبَةُ",
+      "translation": "Tahukah kamu apakah jalan yang mendaki lagi sukar itu?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090012.mp3"
+    },
+    {
+      "number": 13,
+      "text": "فَكُّ رَقَبَةٍ",
+      "translation": "(yaitu) melepaskan budak dari perbudakan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090013.mp3"
+    },
+    {
+      "number": 14,
+      "text": "أَوْ إِطْعَٰمٌۭ فِى يَوْمٍۢ ذِى مَسْغَبَةٍۢ",
+      "translation": "atau memberi makan pada hari kelaparan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090014.mp3"
+    },
+    {
+      "number": 15,
+      "text": "يَتِيمًۭا ذَا مَقْرَبَةٍ",
+      "translation": "(kepada) anak yatim yang ada hubungan kerabat,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090015.mp3"
+    },
+    {
+      "number": 16,
+      "text": "أَوْ مِسْكِينًۭا ذَا مَتْرَبَةٍۢ",
+      "translation": "atau kepada orang miskin yang sangat fakir.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090016.mp3"
+    },
+    {
+      "number": 17,
+      "text": "ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُوا۟ وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ",
+      "translation": "Dan dia (tidak pula) termasuk orang-orang yang beriman dan saling berpesan untuk bersabar dan saling berpesan untuk berkasih sayang.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090017.mp3"
+    },
+    {
+      "number": 18,
+      "text": "أُو۟لَٰٓئِكَ أَصْحَٰبُ ٱلْمَيْمَنَةِ",
+      "translation": "Mereka (orang-orang yang beriman dan saling berpesan itu) adalah golongan kanan.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090018.mp3"
+    },
+    {
+      "number": 19,
+      "text": "وَٱلَّذِينَ كَفَرُوا۟ بِـَٔايَٰتِنَا هُمْ أَصْحَٰبُ ٱلْمَشْـَٔمَةِ",
+      "translation": "Dan orang-orang yang kafir kepada ayat-ayat Kami, mereka itu adalah golongan kiri.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090019.mp3"
+    },
+    {
+      "number": 20,
+      "text": "عَلَيْهِمْ نَارٌۭ مُّؤْصَدَةٌۢ",
+      "translation": "Mereka berada dalam neraka yang ditutup rapat.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/090020.mp3"
+    }
+  ]
+}

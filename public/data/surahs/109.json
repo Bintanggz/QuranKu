@@ -1,0 +1,47 @@
+{
+  "number": 109,
+  "name": "Al-Kaafiroon",
+  "arabicName": "سُورَةُ الكَافِرُونَ",
+  "meaning": "Orang-Orang Kafir",
+  "revelation": "MECCAN",
+  "totalAyah": 6,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ",
+      "translation": "Katakanlah: \"Hai orang-orang kafir,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+      "translation": "Aku tidak akan menyembah apa yang kamu sembah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+      "translation": "Dan kamu bukan penyembah Tuhan yang aku sembah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "وَلَآ أَنَا۠ عَابِدٌۭ مَّا عَبَدتُّمْ",
+      "translation": "Dan aku tidak pernah menjadi penyembah apa yang kamu sembah,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+      "translation": "dan kamu tidak pernah (pula) menjadi penyembah Tuhan yang aku sembah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+      "translation": "Untukmu agamamu, dan untukkulah, agamaku\".",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/109006.mp3"
+    }
+  ]
+}

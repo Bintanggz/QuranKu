@@ -1,0 +1,914 @@
+[
+  {
+    "number": 1,
+    "name": "Al-Faatiha",
+    "arabicName": "سُورَةُ ٱلْفَاتِحَةِ",
+    "meaning": "Pembukaan",
+    "revelation": "MECCAN",
+    "totalAyah": 7
+  },
+  {
+    "number": 2,
+    "name": "Al-Baqara",
+    "arabicName": "سُورَةُ البَقَرَةِ",
+    "meaning": "Sapi Betina",
+    "revelation": "MEDINAN",
+    "totalAyah": 286
+  },
+  {
+    "number": 3,
+    "name": "Aal-i-Imraan",
+    "arabicName": "سُورَةُ آلِ عِمۡرَانَ",
+    "meaning": "Keluarga Imran",
+    "revelation": "MEDINAN",
+    "totalAyah": 200
+  },
+  {
+    "number": 4,
+    "name": "An-Nisaa",
+    "arabicName": "سُورَةُ النِّسَاءِ",
+    "meaning": "Wanita",
+    "revelation": "MEDINAN",
+    "totalAyah": 176
+  },
+  {
+    "number": 5,
+    "name": "Al-Maaida",
+    "arabicName": "سُورَةُ المَائـِدَةِ",
+    "meaning": "Jamuan Hidangan",
+    "revelation": "MEDINAN",
+    "totalAyah": 120
+  },
+  {
+    "number": 6,
+    "name": "Al-An'aam",
+    "arabicName": "سُورَةُ الأَنۡعَامِ",
+    "meaning": "Binatang Ternak",
+    "revelation": "MECCAN",
+    "totalAyah": 165
+  },
+  {
+    "number": 7,
+    "name": "Al-A'raaf",
+    "arabicName": "سُورَةُ الأَعۡرَافِ",
+    "meaning": "Tempat Tertinggi",
+    "revelation": "MECCAN",
+    "totalAyah": 206
+  },
+  {
+    "number": 8,
+    "name": "Al-Anfaal",
+    "arabicName": "سُورَةُ الأَنفَالِ",
+    "meaning": "Rampasan Perang",
+    "revelation": "MEDINAN",
+    "totalAyah": 75
+  },
+  {
+    "number": 9,
+    "name": "At-Tawba",
+    "arabicName": "سُورَةُ التَّوۡبَةِ",
+    "meaning": "Pengampunan",
+    "revelation": "MEDINAN",
+    "totalAyah": 129
+  },
+  {
+    "number": 10,
+    "name": "Yunus",
+    "arabicName": "سُورَةُ يُونُسَ",
+    "meaning": "Yunus",
+    "revelation": "MECCAN",
+    "totalAyah": 109
+  },
+  {
+    "number": 11,
+    "name": "Hud",
+    "arabicName": "سُورَةُ هُودٍ",
+    "meaning": "Hud",
+    "revelation": "MECCAN",
+    "totalAyah": 123
+  },
+  {
+    "number": 12,
+    "name": "Yusuf",
+    "arabicName": "سُورَةُ يُوسُفَ",
+    "meaning": "Yusuf",
+    "revelation": "MECCAN",
+    "totalAyah": 111
+  },
+  {
+    "number": 13,
+    "name": "Ar-Ra'd",
+    "arabicName": "سُورَةُ الرَّعۡدِ",
+    "meaning": "Guruh",
+    "revelation": "MEDINAN",
+    "totalAyah": 43
+  },
+  {
+    "number": 14,
+    "name": "Ibrahim",
+    "arabicName": "سُورَةُ إِبۡرَاهِيمَ",
+    "meaning": "Ibrahim",
+    "revelation": "MECCAN",
+    "totalAyah": 52
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr",
+    "arabicName": "سُورَةُ الحِجۡرِ",
+    "meaning": "Bukit Al-Hijr",
+    "revelation": "MECCAN",
+    "totalAyah": 99
+  },
+  {
+    "number": 16,
+    "name": "An-Nahl",
+    "arabicName": "سُورَةُ النَّحۡلِ",
+    "meaning": "Lebah",
+    "revelation": "MECCAN",
+    "totalAyah": 128
+  },
+  {
+    "number": 17,
+    "name": "Al-Israa",
+    "arabicName": "سُورَةُ الإِسۡرَاءِ",
+    "meaning": "Perjalanan Malam",
+    "revelation": "MECCAN",
+    "totalAyah": 111
+  },
+  {
+    "number": 18,
+    "name": "Al-Kahf",
+    "arabicName": "سُورَةُ الكَهۡفِ",
+    "meaning": "Gua",
+    "revelation": "MECCAN",
+    "totalAyah": 110
+  },
+  {
+    "number": 19,
+    "name": "Maryam",
+    "arabicName": "سُورَةُ مَرۡيَمَ",
+    "meaning": "Maryam",
+    "revelation": "MECCAN",
+    "totalAyah": 98
+  },
+  {
+    "number": 20,
+    "name": "Taa-Haa",
+    "arabicName": "سُورَةُ طه",
+    "meaning": "Taha",
+    "revelation": "MECCAN",
+    "totalAyah": 135
+  },
+  {
+    "number": 21,
+    "name": "Al-Anbiyaa",
+    "arabicName": "سُورَةُ الأَنبِيَاءِ",
+    "meaning": "Para Nabi",
+    "revelation": "MECCAN",
+    "totalAyah": 112
+  },
+  {
+    "number": 22,
+    "name": "Al-Hajj",
+    "arabicName": "سُورَةُ الحَجِّ",
+    "meaning": "Haji",
+    "revelation": "MEDINAN",
+    "totalAyah": 78
+  },
+  {
+    "number": 23,
+    "name": "Al-Muminoon",
+    "arabicName": "سُورَةُ المُؤۡمِنُونَ",
+    "meaning": "Orang-Orang Mukmin",
+    "revelation": "MECCAN",
+    "totalAyah": 118
+  },
+  {
+    "number": 24,
+    "name": "An-Noor",
+    "arabicName": "سُورَةُ النُّورِ",
+    "meaning": "Cahaya",
+    "revelation": "MEDINAN",
+    "totalAyah": 64
+  },
+  {
+    "number": 25,
+    "name": "Al-Furqaan",
+    "arabicName": "سُورَةُ الفُرۡقَانِ",
+    "meaning": "Pembeda",
+    "revelation": "MECCAN",
+    "totalAyah": 77
+  },
+  {
+    "number": 26,
+    "name": "Ash-Shu'araa",
+    "arabicName": "سُورَةُ الشُّعَرَاءِ",
+    "meaning": "Penyair",
+    "revelation": "MECCAN",
+    "totalAyah": 227
+  },
+  {
+    "number": 27,
+    "name": "An-Naml",
+    "arabicName": "سُورَةُ النَّمۡلِ",
+    "meaning": "Semut",
+    "revelation": "MECCAN",
+    "totalAyah": 93
+  },
+  {
+    "number": 28,
+    "name": "Al-Qasas",
+    "arabicName": "سُورَةُ القَصَصِ",
+    "meaning": "Kisah-Kisah",
+    "revelation": "MECCAN",
+    "totalAyah": 88
+  },
+  {
+    "number": 29,
+    "name": "Al-Ankaboot",
+    "arabicName": "سُورَةُ العَنكَبُوتِ",
+    "meaning": "Laba-Laba",
+    "revelation": "MECCAN",
+    "totalAyah": 69
+  },
+  {
+    "number": 30,
+    "name": "Ar-Room",
+    "arabicName": "سُورَةُ الرُّومِ",
+    "meaning": "Bangsa Romawi",
+    "revelation": "MECCAN",
+    "totalAyah": 60
+  },
+  {
+    "number": 31,
+    "name": "Luqman",
+    "arabicName": "سُورَةُ لُقۡمَانَ",
+    "meaning": "Luqman",
+    "revelation": "MECCAN",
+    "totalAyah": 34
+  },
+  {
+    "number": 32,
+    "name": "As-Sajda",
+    "arabicName": "سُورَةُ السَّجۡدَةِ",
+    "meaning": "Sujud",
+    "revelation": "MECCAN",
+    "totalAyah": 30
+  },
+  {
+    "number": 33,
+    "name": "Al-Ahzaab",
+    "arabicName": "سُورَةُ الأَحۡزَابِ",
+    "meaning": "Golongan yang Bersekutu",
+    "revelation": "MEDINAN",
+    "totalAyah": 73
+  },
+  {
+    "number": 34,
+    "name": "Saba",
+    "arabicName": "سُورَةُ سَبَإٍ",
+    "meaning": "Saba'",
+    "revelation": "MECCAN",
+    "totalAyah": 54
+  },
+  {
+    "number": 35,
+    "name": "Faatir",
+    "arabicName": "سُورَةُ فَاطِرٍ",
+    "meaning": "Pencipta",
+    "revelation": "MECCAN",
+    "totalAyah": 45
+  },
+  {
+    "number": 36,
+    "name": "Yaseen",
+    "arabicName": "سُورَةُ يسٓ",
+    "meaning": "Yasin",
+    "revelation": "MECCAN",
+    "totalAyah": 83
+  },
+  {
+    "number": 37,
+    "name": "As-Saaffaat",
+    "arabicName": "سُورَةُ الصَّافَّاتِ",
+    "meaning": "Barisan-Barisan",
+    "revelation": "MECCAN",
+    "totalAyah": 182
+  },
+  {
+    "number": 38,
+    "name": "Saad",
+    "arabicName": "سُورَةُ صٓ",
+    "meaning": "Shad",
+    "revelation": "MECCAN",
+    "totalAyah": 88
+  },
+  {
+    "number": 39,
+    "name": "Az-Zumar",
+    "arabicName": "سُورَةُ الزُّمَرِ",
+    "meaning": "Rombongan",
+    "revelation": "MECCAN",
+    "totalAyah": 75
+  },
+  {
+    "number": 40,
+    "name": "Ghafir",
+    "arabicName": "سُورَةُ غَافِرٍ",
+    "meaning": "Maha Pengampun",
+    "revelation": "MECCAN",
+    "totalAyah": 85
+  },
+  {
+    "number": 41,
+    "name": "Fussilat",
+    "arabicName": "سُورَةُ فُصِّلَتۡ",
+    "meaning": "Dijelaskan",
+    "revelation": "MECCAN",
+    "totalAyah": 54
+  },
+  {
+    "number": 42,
+    "name": "Ash-Shura",
+    "arabicName": "سُورَةُ الشُّورَىٰ",
+    "meaning": "Musyawarah",
+    "revelation": "MECCAN",
+    "totalAyah": 53
+  },
+  {
+    "number": 43,
+    "name": "Az-Zukhruf",
+    "arabicName": "سُورَةُ الزُّخۡرُفِ",
+    "meaning": "Perhiasan",
+    "revelation": "MECCAN",
+    "totalAyah": 89
+  },
+  {
+    "number": 44,
+    "name": "Ad-Dukhaan",
+    "arabicName": "سُورَةُ الدُّخَانِ",
+    "meaning": "Kabut",
+    "revelation": "MECCAN",
+    "totalAyah": 59
+  },
+  {
+    "number": 45,
+    "name": "Al-Jaathiya",
+    "arabicName": "سُورَةُ الجَاثِيَةِ",
+    "meaning": "Berlutut",
+    "revelation": "MECCAN",
+    "totalAyah": 37
+  },
+  {
+    "number": 46,
+    "name": "Al-Ahqaf",
+    "arabicName": "سُورَةُ الأَحۡقَافِ",
+    "meaning": "Bukit Pasir",
+    "revelation": "MECCAN",
+    "totalAyah": 35
+  },
+  {
+    "number": 47,
+    "name": "Muhammad",
+    "arabicName": "سُورَةُ مُحَمَّدٍ",
+    "meaning": "Muhammad",
+    "revelation": "MEDINAN",
+    "totalAyah": 38
+  },
+  {
+    "number": 48,
+    "name": "Al-Fath",
+    "arabicName": "سُورَةُ الفَتۡحِ",
+    "meaning": "Kemenangan",
+    "revelation": "MEDINAN",
+    "totalAyah": 29
+  },
+  {
+    "number": 49,
+    "name": "Al-Hujuraat",
+    "arabicName": "سُورَةُ الحُجُرَاتِ",
+    "meaning": "Kamar-Kamar",
+    "revelation": "MEDINAN",
+    "totalAyah": 18
+  },
+  {
+    "number": 50,
+    "name": "Qaaf",
+    "arabicName": "سُورَةُ قٓ",
+    "meaning": "Qaf",
+    "revelation": "MECCAN",
+    "totalAyah": 45
+  },
+  {
+    "number": 51,
+    "name": "Adh-Dhaariyat",
+    "arabicName": "سُورَةُ الذَّارِيَاتِ",
+    "meaning": "Angin yang Menerbangkan",
+    "revelation": "MECCAN",
+    "totalAyah": 60
+  },
+  {
+    "number": 52,
+    "name": "At-Tur",
+    "arabicName": "سُورَةُ الطُّورِ",
+    "meaning": "Bukit Tursina",
+    "revelation": "MECCAN",
+    "totalAyah": 49
+  },
+  {
+    "number": 53,
+    "name": "An-Najm",
+    "arabicName": "سُورَةُ النَّجۡمِ",
+    "meaning": "Bintang",
+    "revelation": "MECCAN",
+    "totalAyah": 62
+  },
+  {
+    "number": 54,
+    "name": "Al-Qamar",
+    "arabicName": "سُورَةُ القَمَرِ",
+    "meaning": "Bulan",
+    "revelation": "MECCAN",
+    "totalAyah": 55
+  },
+  {
+    "number": 55,
+    "name": "Ar-Rahmaan",
+    "arabicName": "سُورَةُ الرَّحۡمَٰن",
+    "meaning": "Maha Pengasih",
+    "revelation": "MEDINAN",
+    "totalAyah": 78
+  },
+  {
+    "number": 56,
+    "name": "Al-Waaqia",
+    "arabicName": "سُورَةُ الوَاقِعَةِ",
+    "meaning": "Hari Kiamat",
+    "revelation": "MECCAN",
+    "totalAyah": 96
+  },
+  {
+    "number": 57,
+    "name": "Al-Hadid",
+    "arabicName": "سُورَةُ الحَدِيدِ",
+    "meaning": "Besi",
+    "revelation": "MEDINAN",
+    "totalAyah": 29
+  },
+  {
+    "number": 58,
+    "name": "Al-Mujaadila",
+    "arabicName": "سُورَةُ المُجَادلَةِ",
+    "meaning": "Gugatan",
+    "revelation": "MEDINAN",
+    "totalAyah": 22
+  },
+  {
+    "number": 59,
+    "name": "Al-Hashr",
+    "arabicName": "سُورَةُ الحَشۡرِ",
+    "meaning": "Pengusiran",
+    "revelation": "MEDINAN",
+    "totalAyah": 24
+  },
+  {
+    "number": 60,
+    "name": "Al-Mumtahana",
+    "arabicName": "سُورَةُ المُمۡتَحنَةِ",
+    "meaning": "Wanita yang Diuji",
+    "revelation": "MEDINAN",
+    "totalAyah": 13
+  },
+  {
+    "number": 61,
+    "name": "As-Saff",
+    "arabicName": "سُورَةُ الصَّفِّ",
+    "meaning": "Barisan",
+    "revelation": "MEDINAN",
+    "totalAyah": 14
+  },
+  {
+    "number": 62,
+    "name": "Al-Jumu'a",
+    "arabicName": "سُورَةُ الجُمُعَةِ",
+    "meaning": "Hari Jumat",
+    "revelation": "MEDINAN",
+    "totalAyah": 11
+  },
+  {
+    "number": 63,
+    "name": "Al-Munaafiqoon",
+    "arabicName": "سُورَةُ المُنَافِقُونَ",
+    "meaning": "Orang-Orang Munafik",
+    "revelation": "MEDINAN",
+    "totalAyah": 11
+  },
+  {
+    "number": 64,
+    "name": "At-Taghaabun",
+    "arabicName": "سُورَةُ التَّغَابُنِ",
+    "meaning": "Hari Ditampakkan Kesalahan",
+    "revelation": "MEDINAN",
+    "totalAyah": 18
+  },
+  {
+    "number": 65,
+    "name": "At-Talaaq",
+    "arabicName": "سُورَةُ الطَّلَاقِ",
+    "meaning": "Talak",
+    "revelation": "MEDINAN",
+    "totalAyah": 12
+  },
+  {
+    "number": 66,
+    "name": "At-Tahrim",
+    "arabicName": "سُورَةُ التَّحۡرِيمِ",
+    "meaning": "Pengharaman",
+    "revelation": "MEDINAN",
+    "totalAyah": 12
+  },
+  {
+    "number": 67,
+    "name": "Al-Mulk",
+    "arabicName": "سُورَةُ المُلۡكِ",
+    "meaning": "Kerajaan",
+    "revelation": "MECCAN",
+    "totalAyah": 30
+  },
+  {
+    "number": 68,
+    "name": "Al-Qalam",
+    "arabicName": "سُورَةُ القَلَمِ",
+    "meaning": "Pena",
+    "revelation": "MECCAN",
+    "totalAyah": 52
+  },
+  {
+    "number": 69,
+    "name": "Al-Haaqqa",
+    "arabicName": "سُورَةُ الحَاقَّةِ",
+    "meaning": "Hari Kiamat",
+    "revelation": "MECCAN",
+    "totalAyah": 52
+  },
+  {
+    "number": 70,
+    "name": "Al-Ma'aarij",
+    "arabicName": "سُورَةُ المَعَارِجِ",
+    "meaning": "Tempat-Tempat Naik",
+    "revelation": "MECCAN",
+    "totalAyah": 44
+  },
+  {
+    "number": 71,
+    "name": "Nooh",
+    "arabicName": "سُورَةُ نُوحٍ",
+    "meaning": "Nuh",
+    "revelation": "MECCAN",
+    "totalAyah": 28
+  },
+  {
+    "number": 72,
+    "name": "Al-Jinn",
+    "arabicName": "سُورَةُ الجِنِّ",
+    "meaning": "Jin",
+    "revelation": "MECCAN",
+    "totalAyah": 28
+  },
+  {
+    "number": 73,
+    "name": "Al-Muzzammil",
+    "arabicName": "سُورَةُ المُزَّمِّلِ",
+    "meaning": "Orang yang Berselimut",
+    "revelation": "MECCAN",
+    "totalAyah": 20
+  },
+  {
+    "number": 74,
+    "name": "Al-Muddaththir",
+    "arabicName": "سُورَةُ المُدَّثِّرِ",
+    "meaning": "Orang yang Berkemul",
+    "revelation": "MECCAN",
+    "totalAyah": 56
+  },
+  {
+    "number": 75,
+    "name": "Al-Qiyaama",
+    "arabicName": "سُورَةُ القِيَامَةِ",
+    "meaning": "Hari Kebangkitan",
+    "revelation": "MECCAN",
+    "totalAyah": 40
+  },
+  {
+    "number": 76,
+    "name": "Al-Insaan",
+    "arabicName": "سُورَةُ الإِنسَانِ",
+    "meaning": "Manusia",
+    "revelation": "MEDINAN",
+    "totalAyah": 31
+  },
+  {
+    "number": 77,
+    "name": "Al-Mursalaat",
+    "arabicName": "سُورَةُ المُرۡسَلَاتِ",
+    "meaning": "Malaikat yang Diutus",
+    "revelation": "MECCAN",
+    "totalAyah": 50
+  },
+  {
+    "number": 78,
+    "name": "An-Naba",
+    "arabicName": "سُورَةُ النَّبَإِ",
+    "meaning": "Berita Besar",
+    "revelation": "MECCAN",
+    "totalAyah": 40
+  },
+  {
+    "number": 79,
+    "name": "An-Naazi'aat",
+    "arabicName": "سُورَةُ النَّازِعَاتِ",
+    "meaning": "Malaikat yang Mencabut",
+    "revelation": "MECCAN",
+    "totalAyah": 46
+  },
+  {
+    "number": 80,
+    "name": "Abasa",
+    "arabicName": "سُورَةُ عَبَسَ",
+    "meaning": "Bermuka Masam",
+    "revelation": "MECCAN",
+    "totalAyah": 42
+  },
+  {
+    "number": 81,
+    "name": "At-Takwir",
+    "arabicName": "سُورَةُ التَّكۡوِيرِ",
+    "meaning": "Menggulung",
+    "revelation": "MECCAN",
+    "totalAyah": 29
+  },
+  {
+    "number": 82,
+    "name": "Al-Infitaar",
+    "arabicName": "سُورَةُ الانفِطَارِ",
+    "meaning": "Terbelah",
+    "revelation": "MECCAN",
+    "totalAyah": 19
+  },
+  {
+    "number": 83,
+    "name": "Al-Mutaffifin",
+    "arabicName": "سُورَةُ المُطَفِّفِينَ",
+    "meaning": "Orang-Orang Curang",
+    "revelation": "MECCAN",
+    "totalAyah": 36
+  },
+  {
+    "number": 84,
+    "name": "Al-Inshiqaaq",
+    "arabicName": "سُورَةُ الانشِقَاقِ",
+    "meaning": "Terbelah",
+    "revelation": "MECCAN",
+    "totalAyah": 25
+  },
+  {
+    "number": 85,
+    "name": "Al-Burooj",
+    "arabicName": "سُورَةُ البُرُوجِ",
+    "meaning": "Gugusan Bintang",
+    "revelation": "MECCAN",
+    "totalAyah": 22
+  },
+  {
+    "number": 86,
+    "name": "At-Taariq",
+    "arabicName": "سُورَةُ الطَّارِقِ",
+    "meaning": "Yang Datang di Malam Hari",
+    "revelation": "MECCAN",
+    "totalAyah": 17
+  },
+  {
+    "number": 87,
+    "name": "Al-A'laa",
+    "arabicName": "سُورَةُ الأَعۡلَىٰ",
+    "meaning": "Maha Tinggi",
+    "revelation": "MECCAN",
+    "totalAyah": 19
+  },
+  {
+    "number": 88,
+    "name": "Al-Ghaashiya",
+    "arabicName": "سُورَةُ الغَاشِيَةِ",
+    "meaning": "Hari Pembalasan",
+    "revelation": "MECCAN",
+    "totalAyah": 26
+  },
+  {
+    "number": 89,
+    "name": "Al-Fajr",
+    "arabicName": "سُورَةُ الفَجۡرِ",
+    "meaning": "Fajar",
+    "revelation": "MECCAN",
+    "totalAyah": 30
+  },
+  {
+    "number": 90,
+    "name": "Al-Balad",
+    "arabicName": "سُورَةُ البَلَدِ",
+    "meaning": "Negeri",
+    "revelation": "MECCAN",
+    "totalAyah": 20
+  },
+  {
+    "number": 91,
+    "name": "Ash-Shams",
+    "arabicName": "سُورَةُ الشَّمۡسِ",
+    "meaning": "Matahari",
+    "revelation": "MECCAN",
+    "totalAyah": 15
+  },
+  {
+    "number": 92,
+    "name": "Al-Lail",
+    "arabicName": "سُورَةُ اللَّيۡلِ",
+    "meaning": "Malam",
+    "revelation": "MECCAN",
+    "totalAyah": 21
+  },
+  {
+    "number": 93,
+    "name": "Ad-Dhuhaa",
+    "arabicName": "سُورَةُ الضُّحَىٰ",
+    "meaning": "Waktu Duha",
+    "revelation": "MECCAN",
+    "totalAyah": 11
+  },
+  {
+    "number": 94,
+    "name": "Ash-Sharh",
+    "arabicName": "سُورَةُ الشَّرۡحِ",
+    "meaning": "Kelapangan",
+    "revelation": "MECCAN",
+    "totalAyah": 8
+  },
+  {
+    "number": 95,
+    "name": "At-Tin",
+    "arabicName": "سُورَةُ التِّينِ",
+    "meaning": "Buah Tin",
+    "revelation": "MECCAN",
+    "totalAyah": 8
+  },
+  {
+    "number": 96,
+    "name": "Al-Alaq",
+    "arabicName": "سُورَةُ العَلَقِ",
+    "meaning": "Segumpal Darah",
+    "revelation": "MECCAN",
+    "totalAyah": 19
+  },
+  {
+    "number": 97,
+    "name": "Al-Qadr",
+    "arabicName": "سُورَةُ القَدۡرِ",
+    "meaning": "Kemuliaan",
+    "revelation": "MECCAN",
+    "totalAyah": 5
+  },
+  {
+    "number": 98,
+    "name": "Al-Bayyina",
+    "arabicName": "سُورَةُ البَيِّنَةِ",
+    "meaning": "Bukti Nyata",
+    "revelation": "MEDINAN",
+    "totalAyah": 8
+  },
+  {
+    "number": 99,
+    "name": "Az-Zalzala",
+    "arabicName": "سُورَةُ الزَّلۡزَلَةِ",
+    "meaning": "Guncangan",
+    "revelation": "MEDINAN",
+    "totalAyah": 8
+  },
+  {
+    "number": 100,
+    "name": "Al-Aadiyaat",
+    "arabicName": "سُورَةُ العَادِيَاتِ",
+    "meaning": "Kuda Perang",
+    "revelation": "MECCAN",
+    "totalAyah": 11
+  },
+  {
+    "number": 101,
+    "name": "Al-Qaari'a",
+    "arabicName": "سُورَةُ القَارِعَةِ",
+    "meaning": "Hari Kiamat",
+    "revelation": "MECCAN",
+    "totalAyah": 11
+  },
+  {
+    "number": 102,
+    "name": "At-Takaathur",
+    "arabicName": "سُورَةُ التَّكَاثُرِ",
+    "meaning": "Bermegah-Megahan",
+    "revelation": "MECCAN",
+    "totalAyah": 8
+  },
+  {
+    "number": 103,
+    "name": "Al-Asr",
+    "arabicName": "سُورَةُ العَصۡرِ",
+    "meaning": "Masa",
+    "revelation": "MECCAN",
+    "totalAyah": 3
+  },
+  {
+    "number": 104,
+    "name": "Al-Humaza",
+    "arabicName": "سُورَةُ الهُمَزَةِ",
+    "meaning": "Pengumpat",
+    "revelation": "MECCAN",
+    "totalAyah": 9
+  },
+  {
+    "number": 105,
+    "name": "Al-Fil",
+    "arabicName": "سُورَةُ الفِيلِ",
+    "meaning": "Gajah",
+    "revelation": "MECCAN",
+    "totalAyah": 5
+  },
+  {
+    "number": 106,
+    "name": "Quraish",
+    "arabicName": "سُورَةُ قُرَيۡشٍ",
+    "meaning": "Suku Quraisy",
+    "revelation": "MECCAN",
+    "totalAyah": 4
+  },
+  {
+    "number": 107,
+    "name": "Al-Maa'un",
+    "arabicName": "سُورَةُ المَاعُونِ",
+    "meaning": "Barang-Barang Berguna",
+    "revelation": "MECCAN",
+    "totalAyah": 7
+  },
+  {
+    "number": 108,
+    "name": "Al-Kawthar",
+    "arabicName": "سُورَةُ الكَوۡثَرِ",
+    "meaning": "Nikmat yang Banyak",
+    "revelation": "MECCAN",
+    "totalAyah": 3
+  },
+  {
+    "number": 109,
+    "name": "Al-Kaafiroon",
+    "arabicName": "سُورَةُ الكَافِرُونَ",
+    "meaning": "Orang-Orang Kafir",
+    "revelation": "MECCAN",
+    "totalAyah": 6
+  },
+  {
+    "number": 110,
+    "name": "An-Nasr",
+    "arabicName": "سُورَةُ النَّصۡرِ",
+    "meaning": "Pertolongan",
+    "revelation": "MEDINAN",
+    "totalAyah": 3
+  },
+  {
+    "number": 111,
+    "name": "Al-Masad",
+    "arabicName": "سُورَةُ المَسَدِ",
+    "meaning": "Gejolak Api",
+    "revelation": "MECCAN",
+    "totalAyah": 5
+  },
+  {
+    "number": 112,
+    "name": "Al-Ikhlaas",
+    "arabicName": "سُورَةُ الإِخۡلَاصِ",
+    "meaning": "Keesaan Allah",
+    "revelation": "MECCAN",
+    "totalAyah": 4
+  },
+  {
+    "number": 113,
+    "name": "Al-Falaq",
+    "arabicName": "سُورَةُ الفَلَقِ",
+    "meaning": "Waktu Subuh",
+    "revelation": "MECCAN",
+    "totalAyah": 5
+  },
+  {
+    "number": 114,
+    "name": "An-Naas",
+    "arabicName": "سُورَةُ النَّاسِ",
+    "meaning": "Manusia",
+    "revelation": "MECCAN",
+    "totalAyah": 6
+  }
+]

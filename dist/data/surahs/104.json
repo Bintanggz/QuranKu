@@ -1,0 +1,65 @@
+{
+  "number": 104,
+  "name": "Al-Humaza",
+  "arabicName": "سُورَةُ الهُمَزَةِ",
+  "meaning": "Pengumpat",
+  "revelation": "MECCAN",
+  "totalAyah": 9,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
+      "translation": "Kecelakaanlah bagi setiap pengumpat lagi pencela,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
+      "translation": "yang mengumpulkan harta dan menghitung-hitung,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+      "translation": "dia mengira bahwa hartanya itu dapat mengkekalkannya,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+      "translation": "sekali-kali tidak! Sesungguhnya dia benar-benar akan dilemparkan ke dalam Huthamah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+      "translation": "Dan tahukah kamu apa Huthamah itu?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+      "translation": "(yaitu) api (yang disediakan) Allah yang dinyalakan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104006.mp3"
+    },
+    {
+      "number": 7,
+      "text": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+      "translation": "yang (membakar) sampai ke hati.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104007.mp3"
+    },
+    {
+      "number": 8,
+      "text": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌۭ",
+      "translation": "Sesungguhnya api itu ditutup rapat atas mereka,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104008.mp3"
+    },
+    {
+      "number": 9,
+      "text": "فِى عَمَدٍۢ مُّمَدَّدَةٍۭ",
+      "translation": "(sedang mereka itu) diikat pada tiang-tiang yang panjang.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/104009.mp3"
+    }
+  ]
+}

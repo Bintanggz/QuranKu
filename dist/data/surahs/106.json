@@ -1,0 +1,35 @@
+{
+  "number": 106,
+  "name": "Quraish",
+  "arabicName": "سُورَةُ قُرَيۡشٍ",
+  "meaning": "Suku Quraisy",
+  "revelation": "MECCAN",
+  "totalAyah": 4,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لِإِيلَٰفِ قُرَيْشٍ",
+      "translation": "Karena kebiasaan orang-orang Quraisy,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/106001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "إِۦلَٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ",
+      "translation": "(yaitu) kebiasaan mereka bepergian pada musim dingin dan musim panas.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/106002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "فَلْيَعْبُدُوا۟ رَبَّ هَٰذَا ٱلْبَيْتِ",
+      "translation": "Maka hendaklah mereka menyembah Tuhan Pemilik rumah ini (Ka'bah).",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/106003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍۢ وَءَامَنَهُم مِّنْ خَوْفٍۭ",
+      "translation": "Yang telah memberi makanan kepada mereka untuk menghilangkan lapar dan mengamankan mereka dari ketakutan.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/106004.mp3"
+    }
+  ]
+}

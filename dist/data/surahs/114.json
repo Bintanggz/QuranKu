@@ -1,0 +1,47 @@
+{
+  "number": 114,
+  "name": "An-Naas",
+  "arabicName": "سُورَةُ النَّاسِ",
+  "meaning": "Manusia",
+  "revelation": "MECCAN",
+  "totalAyah": 6,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+      "translation": "Katakanlah: \"Aku berlindung kepada Tuhan (yang memelihara dan menguasai) manusia.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "مَلِكِ ٱلنَّاسِ",
+      "translation": "Raja manusia.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "إِلَٰهِ ٱلنَّاسِ",
+      "translation": "Sembahan manusia.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+      "translation": "Dari kejahatan (bisikan) syaitan yang biasa bersembunyi,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+      "translation": "yang membisikkan (kejahatan) ke dalam dada manusia,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+      "translation": "dari (golongan) jin dan manusia.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/114006.mp3"
+    }
+  ]
+}

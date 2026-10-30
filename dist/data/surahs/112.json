@@ -1,0 +1,35 @@
+{
+  "number": 112,
+  "name": "Al-Ikhlaas",
+  "arabicName": "سُورَةُ الإِخۡلَاصِ",
+  "meaning": "Keesaan Allah",
+  "revelation": "MECCAN",
+  "totalAyah": 4,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "translation": "Katakanlah: \"Dialah Allah, Yang Maha Esa.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/112001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "ٱللَّهُ ٱلصَّمَدُ",
+      "translation": "Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/112002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation": "Dia tiada beranak dan tidak pula diperanakkan,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/112003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+      "translation": "dan tidak ada seorangpun yang setara dengan Dia\".",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/112004.mp3"
+    }
+  ]
+}

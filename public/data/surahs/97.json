@@ -1,0 +1,41 @@
+{
+  "number": 97,
+  "name": "Al-Qadr",
+  "arabicName": "سُورَةُ القَدۡرِ",
+  "meaning": "Kemuliaan",
+  "revelation": "MECCAN",
+  "totalAyah": 5,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+      "translation": "Sesungguhnya Kami telah menurunkannya (Al Quran) pada malam kemuliaan.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/097001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+      "translation": "Dan tahukah kamu apakah malam kemuliaan itu?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/097002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌۭ مِّنْ أَلْفِ شَهْرٍۢ",
+      "translation": "Malam kemuliaan itu lebih baik dari seribu bulan.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/097003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍۢ",
+      "translation": "Pada malam itu turun malaikat-malaikat dan malaikat Jibril dengan izin Tuhannya untuk mengatur segala urusan.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/097004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "سَلَٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+      "translation": "Malam itu (penuh) kesejahteraan sampai terbit fajar.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/097005.mp3"
+    }
+  ]
+}

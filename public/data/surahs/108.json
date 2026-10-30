@@ -1,0 +1,29 @@
+{
+  "number": 108,
+  "name": "Al-Kawthar",
+  "arabicName": "سُورَةُ الكَوۡثَرِ",
+  "meaning": "Nikmat yang Banyak",
+  "revelation": "MECCAN",
+  "totalAyah": 3,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ",
+      "translation": "Sesungguhnya Kami telah memberikan kepadamu nikmat yang banyak.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/108001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+      "translation": "Maka dirikanlah shalat karena Tuhanmu; dan berkorbanlah.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/108002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+      "translation": "Sesungguhnya orang-orang yang membenci kamu dialah yang terputus.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/108003.mp3"
+    }
+  ]
+}

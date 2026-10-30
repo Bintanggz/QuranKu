@@ -1,0 +1,108 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "var(--color-primary)",
+        "primary-container": "var(--color-primary-container)",
+        "on-primary": "var(--color-on-primary)",
+        "on-primary-container": "var(--color-on-primary-container)",
+        "primary-fixed": "var(--color-primary-fixed)",
+        "primary-fixed-dim": "var(--color-primary-fixed-dim)",
+        "on-primary-fixed": "var(--color-on-primary-fixed)",
+        "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)",
+
+        "secondary": "var(--color-secondary)",
+        "secondary-container": "var(--color-secondary-container)",
+        "on-secondary": "var(--color-on-secondary)",
+        "on-secondary-container": "var(--color-on-secondary-container)",
+        "secondary-fixed": "var(--color-secondary-fixed)",
+        "secondary-fixed-dim": "var(--color-secondary-fixed-dim)",
+        "on-secondary-fixed": "var(--color-on-secondary-fixed)",
+        "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)",
+        "accent-gold": "var(--color-accent-gold)",
+
+        "tertiary": "var(--color-tertiary)",
+        "tertiary-container": "var(--color-tertiary-container)",
+        "on-tertiary": "var(--color-on-tertiary)",
+        "on-tertiary-container": "var(--color-on-tertiary-container)",
+        "tertiary-fixed": "var(--color-tertiary-fixed)",
+        "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+        "on-tertiary-fixed": "var(--color-on-tertiary-fixed)",
+        "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)",
+
+        "background": "var(--color-background)",
+        "on-background": "var(--color-on-background)",
+
+        "surface": "var(--color-surface)",
+        "surface-dim": "var(--color-surface-dim)",
+        "surface-bright": "var(--color-surface-bright)",
+        "surface-container-lowest": "var(--color-surface-container-lowest)",
+        "surface-container-low": "var(--color-surface-container-low)",
+        "surface-container": "var(--color-surface-container)",
+        "surface-container-high": "var(--color-surface-container-high)",
+        "surface-container-highest": "var(--color-surface-container-highest)",
+        "surface-variant": "var(--color-surface-variant)",
+        "surface-tint": "var(--color-surface-tint)",
+        "on-surface": "var(--color-on-surface)",
+        "on-surface-variant": "var(--color-on-surface-variant)",
+
+        "outline": "var(--color-outline)",
+        "outline-variant": "var(--color-outline-variant)",
+
+        "error": "var(--color-error)",
+        "on-error": "var(--color-on-error)",
+        "error-container": "var(--color-error-container)",
+        "on-error-container": "var(--color-on-error-container)",
+      },
+      borderRadius: {
+        "sm": "0.5rem",
+        "DEFAULT": "1rem",
+        "md": "1.5rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px",
+        "top-bar": "32px",
+      },
+      spacing: {
+        "container-margin": "24px",
+        "inner-padding": "20px",
+        "section-padding": "32px",
+        "stack-gap": "16px",
+      },
+      fontFamily: {
+        "arabic-display": ["Amiri", "Scheherazade New", "serif"],
+        "arabic-quran": ["Amiri Quran", "Amiri", "Scheherazade New", "serif"],
+        "headline-lg": ["Noto Serif", "serif"],
+        "headline-md": ["Noto Serif", "serif"],
+        "body-lg": ["Inter", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "label-sm": ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+        "arabic-display": ["36px", { lineHeight: "58px", fontWeight: "700" }],
+      },
+      boxShadow: {
+        "soft-emerald": "0 10px 30px -5px rgba(6, 78, 59, 0.08)",
+        "card-ambient": "0 8px 30px rgba(6, 78, 59, 0.04)",
+        "header-deep": "0 20px 40px rgba(6, 78, 59, 0.15)",
+        "verse-active": "0 15px 30px rgba(6, 78, 59, 0.08)",
+        "verse-default": "0 4px 20px rgba(0, 0, 0, 0.03)",
+        "bottom-nav": "0 -8px 30px rgba(6, 78, 59, 0.08)",
+        "album-art": "0 20px 50px -12px rgba(6, 78, 59, 0.25)",
+      }
+    },
+  },
+  plugins: [],
+};
+

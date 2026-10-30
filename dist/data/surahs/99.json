@@ -1,0 +1,59 @@
+{
+  "number": 99,
+  "name": "Az-Zalzala",
+  "arabicName": "سُورَةُ الزَّلۡزَلَةِ",
+  "meaning": "Guncangan",
+  "revelation": "MEDINAN",
+  "totalAyah": 8,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+      "translation": "Apabila bumi digoncangkan dengan goncangan (yang dahsyat),",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا",
+      "translation": "dan bumi telah mengeluarkan beban-beban berat (yang dikandung)nya,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "وَقَالَ ٱلْإِنسَٰنُ مَا لَهَا",
+      "translation": "dan manusia bertanya: \"Mengapa bumi (menjadi begini)?\",",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "يَوْمَئِذٍۢ تُحَدِّثُ أَخْبَارَهَا",
+      "translation": "pada hari itu bumi menceritakan beritanya,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+      "translation": "karena sesungguhnya Tuhanmu telah memerintahkan (yang sedemikian itu) kepadanya.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "يَوْمَئِذٍۢ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًۭا لِّيُرَوْا۟ أَعْمَٰلَهُمْ",
+      "translation": "Pada hari itu manusia ke luar dari kuburnya dalam keadaan bermacam-macam, supaya diperlihatkan kepada mereka (balasan) pekerjaan mereka,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099006.mp3"
+    },
+    {
+      "number": 7,
+      "text": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًۭا يَرَهُۥ",
+      "translation": "Barangsiapa yang mengerjakan kebaikan seberat dzarrahpun, niscaya dia akan melihat (balasan)nya.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099007.mp3"
+    },
+    {
+      "number": 8,
+      "text": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ شَرًّۭا يَرَهُۥ",
+      "translation": "Dan barangsiapa yang mengerjakan kejahatan sebesar dzarrahpun, niscaya dia akan melihat (balasan)nya pula.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/099008.mp3"
+    }
+  ]
+}

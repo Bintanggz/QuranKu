@@ -1,0 +1,59 @@
+{
+  "number": 95,
+  "name": "At-Tin",
+  "arabicName": "سُورَةُ التِّينِ",
+  "meaning": "Buah Tin",
+  "revelation": "MECCAN",
+  "totalAyah": 8,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلتِّينِ وَٱلزَّيْتُونِ",
+      "translation": "Demi (buah) Tin dan (buah) Zaitun,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "وَطُورِ سِينِينَ",
+      "translation": "dan demi bukit Sinai,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "وَهَٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+      "translation": "dan demi kota (Mekah) ini yang aman,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095003.mp3"
+    },
+    {
+      "number": 4,
+      "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍۢ",
+      "translation": "sesungguhnya Kami telah menciptakan manusia dalam bentuk yang sebaik-baiknya.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095004.mp3"
+    },
+    {
+      "number": 5,
+      "text": "ثُمَّ رَدَدْنَٰهُ أَسْفَلَ سَٰفِلِينَ",
+      "translation": "Kemudian Kami kembalikan dia ke tempat yang serendah-rendahnya (neraka),",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095005.mp3"
+    },
+    {
+      "number": 6,
+      "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۢ",
+      "translation": "kecuali orang-orang yang beriman dan mengerjakan amal saleh; maka bagi mereka pahala yang tiada putus-putusnya.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095006.mp3"
+    },
+    {
+      "number": 7,
+      "text": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+      "translation": "Maka apakah yang menyebabkan kamu mendustakan (hari) pembalasan sesudah (adanya keterangan-keterangan) itu?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095007.mp3"
+    },
+    {
+      "number": 8,
+      "text": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَٰكِمِينَ",
+      "translation": "Bukankah Allah Hakim yang seadil-adilnya?",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/095008.mp3"
+    }
+  ]
+}

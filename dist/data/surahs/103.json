@@ -1,0 +1,29 @@
+{
+  "number": 103,
+  "name": "Al-Asr",
+  "arabicName": "سُورَةُ العَصۡرِ",
+  "meaning": "Masa",
+  "revelation": "MECCAN",
+  "totalAyah": 3,
+  "bismillahPre": true,
+  "ayahs": [
+    {
+      "number": 1,
+      "text": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَصْرِ",
+      "translation": "Demi masa.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/103001.mp3"
+    },
+    {
+      "number": 2,
+      "text": "إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ",
+      "translation": "Sesungguhnya manusia itu benar-benar dalam kerugian,",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/103002.mp3"
+    },
+    {
+      "number": 3,
+      "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+      "translation": "kecuali orang-orang yang beriman dan mengerjakan amal saleh dan nasehat menasehati supaya mentaati kebenaran dan nasehat menasehati supaya menetapi kesabaran.",
+      "audioUrl": "https://everyayah.com/data/Alafasy_128kbps/103003.mp3"
+    }
+  ]
+}
