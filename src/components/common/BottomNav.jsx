@@ -3,47 +3,54 @@ import React from 'react';
 export default function BottomNav({ activeTab, onTabChange }) {
   const tabs = [
     { id: 'home', label: 'Home', icon: 'home' },
-    { id: 'bookmark', label: 'Bookmark', icon: 'bookmark' },
+    { id: 'bookmarks', label: 'Bookmark', icon: 'bookmark' },
     { id: 'audio', label: 'Audio', icon: 'headphones' },
     { id: 'settings', label: 'Settings', icon: 'settings' },
   ];
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 flex justify-center pointer-events-none"
+      className="w-full bg-white/90 dark:bg-emerald-950/90 backdrop-blur-xl rounded-t-[32px] border-t border-amber-100/40 dark:border-emerald-800/40 shadow-[0_-8px_30px_rgba(6,78,59,0.08)] px-4 pt-3.5 pb-6 sm:pb-4 flex justify-around items-center shrink-0 z-40 transition-colors"
       role="navigation"
       aria-label="Navigasi Utama"
     >
-      <div className="w-full max-w-[430px] pointer-events-auto bg-surface/90 dark:bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/30 rounded-t-top-bar shadow-bottom-nav px-3 pt-2.5 pb-6 flex justify-around items-center transition-colors duration-200">
-        {tabs.map((tab) => {
-          const isActive = activeTab === tab.id;
+      {tabs.map((tab) => {
+        const isActive = activeTab === tab.id;
+        if (isActive) {
           return (
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
-              className={`flex flex-col items-center justify-center transition-all duration-200 cursor-pointer ${
-                isActive
-                  ? 'bg-primary-container text-on-primary rounded-full px-5 py-1.5 -translate-y-0.5 shadow-md shadow-primary-container/20'
-                  : 'text-on-surface-variant/70 hover:text-on-surface px-4 py-1.5'
-              }`}
+              className="flex flex-col items-center justify-center bg-emerald-900 dark:bg-amber-500 text-white dark:text-emerald-950 rounded-full px-5 py-1.5 transition-all duration-300 translate-y-[-2px] cursor-pointer"
               aria-label={tab.label}
-              aria-current={isActive ? 'page' : undefined}
             >
               <span
-                className={`material-symbols-outlined text-[22px] transition-transform ${
-                  isActive ? 'fill-1 scale-105' : ''
-                }`}
+                className="material-symbols-outlined text-[22px]"
+                style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 {tab.icon}
               </span>
-              <span className="font-headline-md text-[10px] font-medium tracking-tight mt-0.5">
+              <span className="font-serif text-[10px] font-medium tracking-tighter">
                 {tab.label}
               </span>
             </button>
           );
-        })}
-      </div>
+        }
+
+        return (
+          <button
+            key={tab.id}
+            onClick={() => onTabChange(tab.id)}
+            className="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-100/40 px-5 py-1.5 hover:text-emerald-900 dark:hover:text-amber-200 transition-colors cursor-pointer"
+            aria-label={tab.label}
+          >
+            <span className="material-symbols-outlined text-[22px]">{tab.icon}</span>
+            <span className="font-serif text-[10px] font-medium tracking-tighter">
+              {tab.label}
+            </span>
+          </button>
+        );
+      })}
     </nav>
   );
 }
-
