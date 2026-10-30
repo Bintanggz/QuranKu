@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { APP_CONFIG } from './config/app';
 import Header from './components/common/Header';
 import BottomNav from './components/common/BottomNav';
+import MiniPlayer from './components/audio/MiniPlayer';
 import HomeScreen from './screens/HomeScreen';
 import SurahDetailScreen from './screens/SurahDetailScreen';
 import BookmarksScreen from './screens/BookmarksScreen';
@@ -9,16 +9,12 @@ import AudioPlayerScreen from './screens/AudioPlayerScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import { useSurahList } from './hooks/useQuran';
 import { useRouter } from './router';
+import { AudioProvider, useAudio } from './contexts/AudioContext';
 
-export default function App() {
+function MainAppContent() {
   const { route, navigate } = useRouter();
   const { surahs, loading: surahLoading, error: surahError } = useSurahList();
-
-  // Audio State Global (agar audio tetap bisa berputar antar screen)
-  const [currentAudio, setCurrentAudio] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [activePlayingAyah, setActivePlayingAyah] = useState(null);
-  const [playingSurah, setPlayingSurah] = useState(null);
+  const { playSurah, currentSurah, isPlaying } = useAudio();
 
   // Dark Mode State
   const [darkMode, setDarkMode] = useState(() => {
@@ -43,13 +39,13 @@ export default function App() {
 
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
-  // Font Size State
+  // Font Size State (Berlaku di Surah Detail & Settings)
   const [fontSize, setFontSize] = useState(() => {
     try {
       const saved = localStorage.getItem('quranku_font_size');
-      return saved ? Number(saved) : 18;
+      return saved ? Number(saved) : 28;
     } catch {
-      return 18;
+      return 28;
     }
   });
 
@@ -58,53 +54,9 @@ export default function App() {
     localStorage.setItem('quranku_font_size', String(size));
   };
 
-  // Audio Player Controller
+  // Handler putar per ayat atau surah
   const handlePlayVerse = (surah, ayah) => {
-    if (currentAudio) {
-      currentAudio.pause();
-    }
-
-    if (activePlayingAyah === ayah.number && isPlaying) {
-      setIsPlaying(false);
-      setActivePlayingAyah(null);
-      return;
-    }
-
-    const sNum = String(surah.number).padStart(3, '0');
-    const aNum = String(ayah.number).padStart(3, '0');
-    const audioUrl = `${APP_CONFIG.audio.verseBaseUrl}/${sNum}${aNum}.mp3`;
-
-    const audio = new Audio(audioUrl);
-    setCurrentAudio(audio);
-    setIsPlaying(true);
-    setActivePlayingAyah(ayah.number);
-    setPlayingSurah(surah);
-
-    audio.play().catch((err) => {
-      console.warn('Gagal memutar audio:', err);
-      setIsPlaying(false);
-      setActivePlayingAyah(null);
-    });
-
-    audio.onended = () => {
-      setIsPlaying(false);
-      setActivePlayingAyah(null);
-    };
-  };
-
-  const toggleFullAudio = () => {
-    if (currentAudio) {
-      if (isPlaying) {
-        currentAudio.pause();
-        setIsPlaying(false);
-      } else {
-        currentAudio.play();
-        setIsPlaying(true);
-      }
-    } else {
-      const surahToPlay = surahs.find((s) => s.number === 18) || surahs[0] || { number: 1, name: 'Al-Fatihah' };
-      handlePlayVerse(surahToPlay, { number: 1 });
-    }
+    playSurah(surah);
   };
 
   return (
@@ -139,24 +91,20 @@ export default function App() {
               surahNumber={route.params.id}
               onBack={() => navigate('home')}
               onPlayVerse={handlePlayVerse}
-              activePlayingAyah={activePlayingAyah}
+              activePlayingAyah={isPlaying && currentSurah?.number === route.params.id ? 1 : null}
+              fontSize={fontSize}
             />
           )}
 
           {route.path === 'bookmarks' && (
             <BookmarksScreen
               onOpenSurah={(id) => navigate('surah', { id })}
-              onPlayVerse={handlePlayVerse}
+              onPlayVerse={(surah) => playSurah(surah)}
             />
           )}
 
           {route.path === 'audio' && (
-            <AudioPlayerScreen
-              surah={playingSurah}
-              isPlaying={isPlaying}
-              onTogglePlay={toggleFullAudio}
-              onBack={() => navigate('home')}
-            />
+            <AudioPlayerScreen />
           )}
 
           {route.path === 'settings' && (
@@ -169,6 +117,11 @@ export default function App() {
           )}
         </div>
 
+        {/* Mini Player Bar: Muncul saat berpindah screen lain dan audio aktif */}
+        {route.path !== 'audio' && (
+          <MiniPlayer onOpenPlayer={() => navigate('audio')} />
+        )}
+
         {/* Bottom Navigation Bar terpasang tepat di dasar frame ponsel */}
         <BottomNav
           activeTab={route.path}
@@ -176,5 +129,15 @@ export default function App() {
         />
       </div>
     </div>
+  );
+}
+
+export default function App() {
+  const { surahs } = useSurahList();
+
+  return (
+    <AudioProvider surahList={surahs}>
+      <MainAppContent />
+    </AudioProvider>
   );
 }

@@ -2,6 +2,38 @@
  * Central Application Configuration
  * Nama dan konfigurasi aplikasi disimpan di sini dan dipakai di seluruh aplikasi.
  */
+
+export const RECITERS = [
+  {
+    id: "mishary_alafasy",
+    name: "Syaikh Mishary Rashid Alafasy",
+    shortName: "Mishary Alafasy",
+    verseBaseUrl: "https://everyayah.com/data/Alafasy_128kbps",
+    getUrl: (num) => `https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/${num}.mp3`,
+  },
+  {
+    id: "abdul_basit",
+    name: "Syaikh Abdul Basit Abdul Samad",
+    shortName: "Abdul Basit",
+    verseBaseUrl: "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps",
+    getUrl: (num) => `https://download.quranicaudio.com/qdc/abdul_baset/murattal/${num}.mp3`,
+  },
+  {
+    id: "khalil_al_husary",
+    name: "Syaikh Mahmoud Khalil Al-Husary",
+    shortName: "Al-Husary",
+    verseBaseUrl: "https://everyayah.com/data/Husary_128kbps",
+    getUrl: (num) => `https://download.quranicaudio.com/qdc/khalil_al_husary/murattal/${num}.mp3`,
+  },
+  {
+    id: "saad_al_ghamdi",
+    name: "Syaikh Saad Al-Ghamdi",
+    shortName: "Saad Al-Ghamdi",
+    verseBaseUrl: "https://everyayah.com/data/Ghamadi_40kbps",
+    getUrl: (num) => `https://server7.mp3quran.net/s_gmd/${String(num).padStart(3, '0')}.mp3`,
+  },
+];
+
 export const APP_CONFIG = {
   name: "QuranKu",
   shortName: "QuranKu",
@@ -46,14 +78,14 @@ export const APP_CONFIG = {
     {
       title: "Audio Murottal (Ayat per Ayat)",
       source: "EveryAyah.com Audio Archive",
-      reciter: "Syaikh Mishary Rashid Alafasy",
+      reciter: "Syaikh Mishary Rashid Alafasy dkk.",
       license: "Non-commercial Islamic Educational Archive",
       url: "https://everyayah.com"
     },
     {
       title: "Audio Murottal (Surah Penuh)",
       source: "Quranicaudio CDN",
-      reciter: "Syaikh Mishary Rashid Alafasy",
+      reciter: "Syaikh Mishary Rashid Alafasy dkk.",
       license: "Public Educational Distribution",
       url: "https://quranicaudio.com"
     },
@@ -67,11 +99,11 @@ export const APP_CONFIG = {
 
   // Default App Settings
   defaults: {
-    fontSize: 18,
-    minFontSize: 14,
-    maxFontSize: 32,
+    fontSize: 24,
+    minFontSize: 16,
+    maxFontSize: 40,
     language: "id",
-    darkMode: false
+    darkMode: false,
+    reciterId: "mishary_alafasy"
   }
 };
-

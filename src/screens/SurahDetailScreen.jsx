@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSurahDetail } from '../hooks/useQuran';
 import { setLastRead, saveBookmark, getBookmarks } from '../services/storage';
 
-export default function SurahDetailScreen({ surahNumber, onBack, onPlayVerse, activePlayingAyah }) {
+export default function SurahDetailScreen({ surahNumber, onBack, onPlayVerse, activePlayingAyah, fontSize = 28 }) {
   const { surah, loading, error, fromCache, refetch } = useSurahDetail(surahNumber);
   const [activeAyah, setActiveAyah] = useState(1);
   const [bookmarks, setBookmarks] = useState(() => getBookmarks());
@@ -219,9 +219,10 @@ export default function SurahDetailScreen({ surahNumber, onBack, onPlayVerse, ac
                 </div>
 
                 {/* Arabic Text (Amiri Quran - Rasm Uthmani) */}
-                <div className="text-right">
+                <div className="text-right pt-1">
                   <p
-                    className="font-arabic-display text-primary leading-relaxed text-3xl sm:text-4xl select-text"
+                    className="font-arabic-display text-primary leading-relaxed select-text font-bold"
+                    style={{ fontSize: `${fontSize}px`, lineHeight: 2.2 }}
                     dir="rtl"
                   >
                     {ayah.text}
