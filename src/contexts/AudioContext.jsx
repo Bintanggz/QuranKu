@@ -1,11 +1,12 @@
-import React, { createContext, useContext, useState, useEffect, useRef, useMemo } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { RECITERS, APP_CONFIG } from '../config/app';
 
 const AudioContext = createContext(null);
 
 export function AudioProvider({ children, surahList = [] }) {
   const audioRef = useRef(new Audio());
-  
+  const activeAyahListRef = useRef([]);
+
   // Reciter State (Persisted in localStorage)
   const [reciterId, setReciterIdState] = useState(() => {
     try {
@@ -24,25 +25,64 @@ export function AudioProvider({ children, surahList = [] }) {
     localStorage.setItem('quranku_reciter', id);
   };
 
-  // Playback State
+  // Playback States
   const [currentSurah, setCurrentSurah] = useState(() => {
     return {
       number: 1,
-      name: "Al-Fatihah",
-      arabicName: "الفَاتِحَة",
-      meaning: "Pembukaan",
-      revelation: "MECCAN",
+      name: 'Al-Fatihah',
+      arabicName: 'الفَاتِحَة',
+      meaning: 'Pembukaan',
+      revelation: 'MECCAN',
       totalAyah: 7,
     };
   });
 
+  const [playbackMode, setPlaybackMode] = useState('surah'); // 'surah' | 'ayah'
+  const [currentAyah, setCurrentAyah] = useState(null); // { number, text, translation, audioUrl }
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
 
-  // Sync Audio Event Listeners
+  // Shuffle & Repeat State
+  const [isShuffle, setIsShuffle] = useState(() => {
+    try {
+      return localStorage.getItem('quranku_audio_shuffle') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  // repeatMode: 'off' | 'all' | 'one'
+  const [repeatMode, setRepeatMode] = useState(() => {
+    try {
+      return localStorage.getItem('quranku_audio_repeat') || 'all';
+    } catch {
+      return 'all';
+    }
+  });
+
+  const toggleShuffle = () => {
+    setIsShuffle((prev) => {
+      const next = !prev;
+      localStorage.setItem('quranku_audio_shuffle', String(next));
+      return next;
+    });
+  };
+
+  const cycleRepeatMode = () => {
+    setRepeatMode((prev) => {
+      let next = 'all';
+      if (prev === 'all') next = 'one';
+      else if (prev === 'one') next = 'off';
+      else next = 'all';
+      localStorage.setItem('quranku_audio_repeat', next);
+      return next;
+    });
+  };
+
+  // Audio Event Listeners Setup
   useEffect(() => {
     const audio = audioRef.current;
 
@@ -69,8 +109,7 @@ export function AudioProvider({ children, surahList = [] }) {
 
     const onEnded = () => {
       setIsPlaying(false);
-      // Putar surah berikutnya secara otomatis
-      nextSurah();
+      handleTrackEnded();
     };
 
     audio.addEventListener('timeupdate', onTimeUpdate);
@@ -88,17 +127,57 @@ export function AudioProvider({ children, surahList = [] }) {
       audio.removeEventListener('pause', onPause);
       audio.removeEventListener('ended', onEnded);
     };
-  }, [currentSurah, surahList]);
+  });
+
+  // Track Ended Handler
+  const handleTrackEnded = () => {
+    const audio = audioRef.current;
+
+    // Mode Repeat One: Ulangi track saat ini
+    if (repeatMode === 'one') {
+      audio.currentTime = 0;
+      audio.play().catch((err) => console.warn('Gagal repeat audio:', err));
+      return;
+    }
+
+    // Jika sedang mode pemutaran ayat
+    if (playbackMode === 'ayah' && currentAyah) {
+      const list = activeAyahListRef.current;
+      const currentIndex = list.findIndex((a) => a.number === currentAyah.number);
+      if (currentIndex !== -1 && currentIndex < list.length - 1) {
+        // Lanjut ke ayat berikutnya secara otomatis
+        const nextAyah = list[currentIndex + 1];
+        playAyah(currentSurah, nextAyah, list);
+        return;
+      }
+      // Sudah sampai akhir ayat di surah
+      if (repeatMode === 'all') {
+        nextSurah();
+      }
+      return;
+    }
+
+    // Mode pemutaran surah penuh
+    if (repeatMode === 'all') {
+      nextSurah();
+    }
+  };
 
   // MediaSession API Integration (Lockscreen & Notification Controls)
   useEffect(() => {
     if ('mediaSession' in navigator && currentSurah) {
+      const title =
+        playbackMode === 'ayah' && currentAyah
+          ? `Surah ${currentSurah.name} : Ayat ${currentAyah.number}`
+          : `Surah ${currentSurah.name} (${currentSurah.arabicName})`;
+
       navigator.mediaSession.metadata = new MediaMetadata({
-        title: `Surah ${currentSurah.name} (${currentSurah.arabicName})`,
+        title,
         artist: reciter.name,
         album: APP_CONFIG.name,
         artwork: [
-          { src: '/favicon.svg', sizes: '96x96', type: 'image/svg+xml' },
+          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
         ],
       });
 
@@ -107,26 +186,69 @@ export function AudioProvider({ children, surahList = [] }) {
       navigator.mediaSession.setActionHandler('previoustrack', () => prevSurah());
       navigator.mediaSession.setActionHandler('nexttrack', () => nextSurah());
     }
-  }, [currentSurah, reciter, isPlaying]);
+  }, [currentSurah, currentAyah, playbackMode, reciter, isPlaying]);
 
-  // Play a specific surah
+  // Play a specific surah (Full Surah Streaming)
   const playSurah = (surah) => {
     if (!surah) return;
     const audio = audioRef.current;
-    
-    // Jika surah sama, toggle
-    if (currentSurah && currentSurah.number === surah.number && audio.src) {
+
+    // Jika surah sama dan mode surah, toggle play/pause
+    if (playbackMode === 'surah' && currentSurah?.number === surah.number && audio.src) {
       togglePlay();
       return;
     }
 
+    setPlaybackMode('surah');
+    setCurrentAyah(null);
     setCurrentSurah(surah);
     setIsLoadingAudio(true);
+
     const audioUrl = reciter.getUrl(surah.number);
     audio.src = audioUrl;
     audio.playbackRate = playbackSpeed;
     audio.play().catch((err) => {
-      console.warn('Gagal memutar audio streaming:', err);
+      console.warn('Gagal memutar audio surah:', err);
+      setIsLoadingAudio(false);
+      setIsPlaying(false);
+    });
+  };
+
+  // Play a specific verse (EveryAyah CDN per ayat)
+  const playAyah = (surah, ayah, ayahList = []) => {
+    if (!surah || !ayah) return;
+    const audio = audioRef.current;
+
+    if (ayahList.length > 0) {
+      activeAyahListRef.current = ayahList;
+    }
+
+    // Jika ayat yang sama diklik saat sedang diputar, toggle pause/play
+    if (
+      playbackMode === 'ayah' &&
+      currentSurah?.number === surah.number &&
+      currentAyah?.number === ayah.number &&
+      audio.src
+    ) {
+      togglePlay();
+      return;
+    }
+
+    setPlaybackMode('ayah');
+    setCurrentSurah(surah);
+    setCurrentAyah(ayah);
+    setIsLoadingAudio(true);
+
+    // Dapatkan URL audio per ayat dari EveryAyah
+    const sNum = String(surah.number).padStart(3, '0');
+    const aNum = String(ayah.number).padStart(3, '0');
+    const audioUrl =
+      ayah.audioUrl || `${APP_CONFIG.audio.verseBaseUrl}/${sNum}${aNum}.mp3`;
+
+    audio.src = audioUrl;
+    audio.playbackRate = playbackSpeed;
+    audio.play().catch((err) => {
+      console.warn(`Gagal memutar audio ayat ${ayah.number}:`, err);
       setIsLoadingAudio(false);
       setIsPlaying(false);
     });
@@ -136,7 +258,11 @@ export function AudioProvider({ children, surahList = [] }) {
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio.src) {
-      playSurah(currentSurah);
+      if (playbackMode === 'ayah' && currentAyah) {
+        playAyah(currentSurah, currentAyah, activeAyahListRef.current);
+      } else {
+        playSurah(currentSurah);
+      }
       return;
     }
 
@@ -166,8 +292,20 @@ export function AudioProvider({ children, surahList = [] }) {
     }
   };
 
-  // Next and Previous Surah
+  // Next and Previous Track
   const nextSurah = () => {
+    if (!surahList || surahList.length === 0) return;
+
+    if (isShuffle) {
+      // Pilih surah acak
+      const available = surahList.filter((s) => s.number !== currentSurah.number);
+      const randomSurah = available[Math.floor(Math.random() * available.length)];
+      if (randomSurah) {
+        playSurah(randomSurah);
+        return;
+      }
+    }
+
     const nextNum = currentSurah.number >= 114 ? 1 : currentSurah.number + 1;
     const next = surahList.find((s) => s.number === nextNum) || {
       number: nextNum,
@@ -179,6 +317,8 @@ export function AudioProvider({ children, surahList = [] }) {
   };
 
   const prevSurah = () => {
+    if (!surahList || surahList.length === 0) return;
+
     const prevNum = currentSurah.number <= 1 ? 114 : currentSurah.number - 1;
     const prev = surahList.find((s) => s.number === prevNum) || {
       number: prevNum,
@@ -208,7 +348,20 @@ export function AudioProvider({ children, surahList = [] }) {
     return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   };
 
-  // Up Next List (surah-surah berikutnya dalam antrean)
+  // Check if a specific ayah is actively playing
+  const isPlayingAyah = useCallback(
+    (surahNumber, ayahNumber) => {
+      return (
+        isPlaying &&
+        playbackMode === 'ayah' &&
+        currentSurah?.number === Number(surahNumber) &&
+        currentAyah?.number === Number(ayahNumber)
+      );
+    },
+    [isPlaying, playbackMode, currentSurah, currentAyah]
+  );
+
+  // Up Next List
   const upNextList = useMemo(() => {
     if (!surahList || surahList.length === 0) return [];
     const currentIndex = surahList.findIndex((s) => s.number === currentSurah.number);
@@ -224,22 +377,30 @@ export function AudioProvider({ children, surahList = [] }) {
 
   const value = {
     currentSurah,
+    currentAyah,
+    playbackMode,
     isPlaying,
     currentTime,
     duration,
     playbackSpeed,
     isLoadingAudio,
+    isShuffle,
+    repeatMode,
     reciter,
     reciterId,
     setReciterId,
     playSurah,
+    playAyah,
     togglePlay,
+    toggleShuffle,
+    cycleRepeatMode,
     seek,
     setSpeed,
     nextSurah,
     prevSurah,
     stopAudio,
     formatTime,
+    isPlayingAyah,
     upNextList,
   };
 
@@ -253,4 +414,3 @@ export function useAudio() {
   }
   return context;
 }
-

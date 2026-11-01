@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="gradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003527" />
+      <stop offset="50%" stop-color="#064E3B" />
+      <stop offset="100%" stop-color="#002117" />
+    </linearGradient>
+    <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE088" />
+      <stop offset="50%" stop-color="#FED65B" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Rounded Rect -->
+  <rect width="512" height="512" rx="112" fill="url(#gradEmerald)" />
+  
+  <!-- Outer Gold Rim -->
+  <rect x="20" y="20" width="472" height="472" rx="96" fill="none" stroke="url(#gradGold)" stroke-width="6" opacity="0.8" />
+  
+  <!-- Decorative 8-Pointed Islamic Star -->
+  <g transform="translate(256, 256) scale(1.15)">
+    <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="url(#gradGold)" stroke-width="4" opacity="0.3" rx="16" />
+    <rect x="-100" y="-100" width="200" height="200" fill="none" stroke="url(#gradGold)" stroke-width="4" opacity="0.3" rx="16" transform="rotate(45)" />
+    
+    <!-- Central Sacred Quran Symbol -->
+    <path d="M-80 -40 C-40 -60, -10 -40, 0 -20 C10 -40, 40 -60, 80 -40 L70 50 C35 35, 10 50, 0 65 C-10 50, -35 35, -70 50 Z" fill="url(#gradGold)" />
+    
+    <!-- Inner Book Details -->
+    <path d="M0 -15 L0 60" stroke="#003527" stroke-width="4" stroke-linecap="round" />
+    <path d="M-60 -10 C-35 -25, -15 -10, -5 0" fill="none" stroke="#003527" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+    <path d="M60 -10 C35 -25, 15 -10, 5 0" fill="none" stroke="#003527" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+    <path d="M-55 15 C-35 5, -15 15, -5 25" fill="none" stroke="#003527" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+    <path d="M55 15 C35 5, 15 15, 5 25" fill="none" stroke="#003527" stroke-width="3" stroke-linecap="round" opacity="0.7" />
+  </g>
+  
+  <!-- Calligraphy Accent Below -->
+  <text x="256" y="420" text-anchor="middle" font-family="'Noto Serif', serif" font-size="34" font-weight="bold" fill="#FFE088" letter-spacing="4">QURANKU</text>
+</svg>

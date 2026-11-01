@@ -22,12 +22,12 @@ export default function HomeScreen({ surahs, loading, error, onSelectSurah, onNa
   return (
     <main className="max-w-screen-xl mx-auto px-container-margin pt-6 space-y-section-padding pb-8">
       {/* Welcome Greeting */}
-      <section className="space-y-2">
-        <p className="font-label-sm text-label-sm text-surface-tint uppercase">
+      <section className="space-y-1">
+        <p className="font-label-sm text-label-sm text-surface-tint font-medium uppercase tracking-wider">
           Assalamu Alaikum
         </p>
         <h2 className="font-headline-lg text-headline-lg text-primary">
-          Ahmad Sulaiman
+          Sahabat Qur'an
         </h2>
       </section>
 
@@ -40,12 +40,12 @@ export default function HomeScreen({ surahs, loading, error, onSelectSurah, onNa
               <span className="material-symbols-outlined text-secondary-fixed">
                 menu_book
               </span>
-              <span className="font-label-sm text-label-sm text-on-primary-container">
-                Last Read
+              <span className="font-label-sm text-label-sm text-on-primary-container font-semibold">
+                Terakhir Dibaca
               </span>
             </div>
             <div>
-              <h3 className="font-headline-md text-headline-md">
+              <h3 className="font-headline-md text-headline-md font-bold">
                 {lastRead.name}
               </h3>
               <p className="font-body-md text-body-md text-on-primary-container opacity-90">
@@ -54,29 +54,24 @@ export default function HomeScreen({ surahs, loading, error, onSelectSurah, onNa
             </div>
             <button
               onClick={() => onSelectSurah(lastRead.number)}
-              className="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer active:scale-95 shadow-sm"
+              className="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer active:scale-95 shadow-sm font-semibold"
             >
-              Continue Reading
+              Lanjutkan Membaca
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
           </div>
 
-          {/* Decorative Calligraphy Image */}
+          {/* Decorative Calligraphy Image (Local Vector Asset - Fast & Offline Ready) */}
           <div className="relative w-full md:w-48 h-32 md:h-40 rounded-xl overflow-hidden gold-rim bg-emerald-950/40 shrink-0">
             <img
-              alt="Islamic calligraphy"
+              alt="Kaligrafi Al-Qur'an Al-Karim"
+              width="192"
+              height="160"
               className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnPP6Xg5Y0BQ7_PhdBbwsDVF8ZNWH2bcg5Z5VUMTxApX1Nu1syJcJ73j1LOdoKqBU4LydGs-hew3i7UgcghMO49FOzBRU7qnZLEKW4yVoC9WWH4YtUEQFatKhY_rJvVsa3KkZs9MvDcUCKookVhlI0uNTXiAstPVXJz0IqlpK1ejswZ0fAluypMvve2YeTKpCf7FVYV8RaShOxgXcNqIwBgWDPtnxCdTOgycg3zZG_DLWbBFo8piSMKvZpBqJRVZ5wXxsmncMiOg"
-              onError={(e) => {
-                // Fallback jika offline
-                e.target.style.display = 'none';
-              }}
+              src="/images/calligraphy.svg"
+              loading="eager"
+              decoding="async"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent flex items-center justify-center pointer-events-none">
-              <span className="font-arabic-display text-4xl text-secondary-fixed/90 drop-shadow">
-                القرآن الكريم
-              </span>
-            </div>
           </div>
         </div>
       </section>
@@ -201,7 +196,7 @@ export default function HomeScreen({ surahs, loading, error, onSelectSurah, onNa
                 <span className="font-arabic-display text-2xl text-primary block leading-none">
                   {surah.arabicName}
                 </span>
-                <span className="font-label-sm text-[10px] text-surface-tint/60 uppercase tracking-wider mt-1 block">
+                <span className="font-label-sm text-[10px] text-surface-tint font-semibold uppercase tracking-wider mt-1 block">
                   {surah.revelation}
                 </span>
               </div>

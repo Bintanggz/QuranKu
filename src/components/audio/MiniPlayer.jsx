@@ -2,7 +2,17 @@ import React from 'react';
 import { useAudio } from '../../contexts/AudioContext';
 
 export default function MiniPlayer({ onOpenPlayer }) {
-  const { currentSurah, isPlaying, togglePlay, stopAudio, reciter, currentTime, duration } = useAudio();
+  const {
+    currentSurah,
+    currentAyah,
+    playbackMode,
+    isPlaying,
+    togglePlay,
+    stopAudio,
+    reciter,
+    currentTime,
+    duration,
+  } = useAudio();
 
   if (!currentSurah) return null;
 
@@ -40,13 +50,20 @@ export default function MiniPlayer({ onOpenPlayer }) {
           <div className="flex items-center gap-1.5">
             <h4 className="font-headline-md text-xs sm:text-sm font-bold text-primary truncate group-hover:text-primary-container">
               {currentSurah.name}
+              {playbackMode === 'ayah' && currentAyah && (
+                <span className="text-secondary font-normal text-xs ml-1">
+                  : {currentAyah.number}
+                </span>
+              )}
             </h4>
             <span className="font-arabic-display text-xs text-secondary-fixed shrink-0">
               {currentSurah.arabicName}
             </span>
           </div>
           <p className="font-label-sm text-[10px] text-on-surface-variant truncate">
-            {reciter.shortName || reciter.name}
+            {playbackMode === 'ayah' && currentAyah
+              ? `Ayat ${currentAyah.number} • ${reciter.shortName || reciter.name}`
+              : reciter.shortName || reciter.name}
           </p>
         </div>
       </div>

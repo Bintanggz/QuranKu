@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Header from './components/common/Header';
 import BottomNav from './components/common/BottomNav';
 import MiniPlayer from './components/audio/MiniPlayer';
+import DrawerMenu from './components/common/DrawerMenu';
+import AboutModal from './components/common/AboutModal';
 import HomeScreen from './screens/HomeScreen';
 import SurahDetailScreen from './screens/SurahDetailScreen';
 import BookmarksScreen from './screens/BookmarksScreen';
@@ -10,11 +12,15 @@ import SettingsScreen from './screens/SettingsScreen';
 import { useSurahList } from './hooks/useQuran';
 import { useRouter } from './router';
 import { AudioProvider, useAudio } from './contexts/AudioContext';
+import { APP_CONFIG } from './config/app';
 
 function MainAppContent() {
   const { route, navigate } = useRouter();
   const { surahs, loading: surahLoading, error: surahError } = useSurahList();
   const { playSurah, currentSurah, isPlaying } = useAudio();
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [showAboutModal, setShowAboutModal] = useState(false);
 
   // Dark Mode State
   const [darkMode, setDarkMode] = useState(() => {
@@ -54,9 +60,40 @@ function MainAppContent() {
     localStorage.setItem('quranku_font_size', String(size));
   };
 
-  // Handler putar per ayat atau surah
-  const handlePlayVerse = (surah, ayah) => {
-    playSurah(surah);
+  // Header Title Kontekstual Sesuai Halaman Aktif
+  const activeSurahMeta = useMemo(() => {
+    if (route.path === 'surah' && route.params.id) {
+      return surahs?.find((s) => s.number === route.params.id);
+    }
+    return null;
+  }, [route.path, route.params.id, surahs]);
+
+  const headerTitle = useMemo(() => {
+    switch (route.path) {
+      case 'home':
+        return APP_CONFIG.name;
+      case 'surah':
+        return activeSurahMeta ? `Surah ${activeSurahMeta.name}` : "Al-Qur'an";
+      case 'bookmarks':
+        return 'Saved Verses';
+      case 'audio':
+        return 'Now Playing';
+      case 'settings':
+        return 'Settings';
+      default:
+        return APP_CONFIG.name;
+    }
+  }, [route.path, activeSurahMeta]);
+
+  // Handler Pencarian di Header
+  const handleHeaderSearch = () => {
+    navigate('home');
+    setTimeout(() => {
+      const searchInput = document.querySelector('input[placeholder*="Search"]');
+      if (searchInput) {
+        searchInput.focus();
+      }
+    }, 150);
   };
 
   return (
@@ -65,13 +102,13 @@ function MainAppContent() {
       {/* Phone container selebar 430px */}
       <div className="w-full max-w-[430px] h-[100dvh] sm:h-[860px] bg-background text-on-background flex flex-col sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative border-x border-outline-variant/20 transition-colors duration-200">
         
-        {/* Top App Bar konsisten sesuai Stitch (Al-Qur'an) */}
+        {/* Top App Bar Dinamis */}
         <Header
-          title="Al-Qur'an"
+          title={headerTitle}
           showBack={route.path === 'surah'}
           onBack={() => navigate('home')}
-          onMenu={toggleDarkMode}
-          onSearch={() => navigate('home')}
+          onMenu={() => setIsDrawerOpen(true)}
+          onSearch={handleHeaderSearch}
         />
 
         {/* Scrollable View Content di dalam frame ponsel */}
@@ -90,8 +127,6 @@ function MainAppContent() {
             <SurahDetailScreen
               surahNumber={route.params.id}
               onBack={() => navigate('home')}
-              onPlayVerse={handlePlayVerse}
-              activePlayingAyah={isPlaying && currentSurah?.number === route.params.id ? 1 : null}
               fontSize={fontSize}
             />
           )}
@@ -126,6 +161,23 @@ function MainAppContent() {
         <BottomNav
           activeTab={route.path}
           onTabChange={(path) => navigate(path)}
+        />
+
+        {/* Quick Menu Drawer */}
+        <DrawerMenu
+          isOpen={isDrawerOpen}
+          onClose={() => setIsDrawerOpen(false)}
+          currentRoute={route.path}
+          onNavigate={(targetPath) => navigate(targetPath)}
+          darkMode={darkMode}
+          onToggleDarkMode={toggleDarkMode}
+          onOpenAbout={() => setShowAboutModal(true)}
+        />
+
+        {/* Shared About Modal */}
+        <AboutModal
+          isOpen={showAboutModal}
+          onClose={() => setShowAboutModal(false)}
         />
       </div>
     </div>
