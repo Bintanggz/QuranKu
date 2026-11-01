@@ -10,7 +10,7 @@ export default function BottomNav({ activeTab, onTabChange }) {
 
   return (
     <nav
-      className="md:hidden w-full bg-white/95 dark:bg-emerald-950/95 backdrop-blur-xl rounded-t-[28px] border-t border-amber-100/50 dark:border-emerald-800/40 shadow-[0_-8px_30px_rgba(6,78,59,0.08)] px-4 pt-3 pb-6 flex justify-around items-center shrink-0 z-40 transition-colors"
+      className="md:hidden w-full bg-white/95 dark:bg-emerald-950/95 backdrop-blur-xl rounded-t-[24px] border-t border-amber-100/50 dark:border-emerald-800/40 shadow-[0_-10px_25px_rgba(6,78,59,0.08)] px-4 pt-2 pb-5 flex justify-around items-center shrink-0 transition-colors"
       role="navigation"
       aria-label="Navigasi Utama Ponsel"
     >
@@ -21,7 +21,7 @@ export default function BottomNav({ activeTab, onTabChange }) {
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
-              className="flex flex-col items-center justify-center bg-emerald-900 dark:bg-amber-500 text-white dark:text-emerald-950 rounded-full px-5 py-1.5 transition-all duration-300 translate-y-[-2px] cursor-pointer shadow-xs"
+              className="flex flex-col items-center justify-center bg-emerald-900 dark:bg-amber-500 text-white dark:text-emerald-950 rounded-full px-5 py-1.5 transition-all duration-300 translate-y-[-1px] cursor-pointer shadow-xs"
               aria-label={tab.label}
             >
               <span

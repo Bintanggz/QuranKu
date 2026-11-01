@@ -109,7 +109,7 @@ function MainAppContent() {
       />
 
       {/* Main View Area: Responsif Penuh (Mobile-first hingga Desktop Wide) */}
-      <div className="flex-1 w-full flex flex-col">
+      <div className="flex-1 w-full flex flex-col pb-24 md:pb-16">
         {route.path === 'home' && (
           <HomeScreen
             surahs={surahs}
@@ -148,16 +148,18 @@ function MainAppContent() {
         )}
       </div>
 
-      {/* Mini Player Bar: Muncul saat berpindah screen lain dan audio aktif */}
-      {route.path !== 'audio' && (
-        <MiniPlayer onOpenPlayer={() => navigate('audio')} />
-      )}
-
-      {/* Bottom Navigation Bar: Satu-satunya Navigasi Utama di Ponsel (< md) */}
-      <BottomNav
-        activeTab={route.path}
-        onTabChange={(path) => navigate(path)}
-      />
+      {/* Fixed Bottom Dock: Melayang permanen di bawah layar ponsel tanpa perlu scroll 114 surah */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 pointer-events-none">
+        <div className="pointer-events-auto">
+          {route.path !== 'audio' && (
+            <MiniPlayer onOpenPlayer={() => navigate('audio')} />
+          )}
+          <BottomNav
+            activeTab={route.path}
+            onTabChange={(path) => navigate(path)}
+          />
+        </div>
+      </div>
 
       {/* Shared About Modal */}
       <AboutModal
