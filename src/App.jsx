@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Header from './components/common/Header';
 import BottomNav from './components/common/BottomNav';
 import MiniPlayer from './components/audio/MiniPlayer';
-import DrawerMenu from './components/common/DrawerMenu';
 import AboutModal from './components/common/AboutModal';
 import HomeScreen from './screens/HomeScreen';
 import SurahDetailScreen from './screens/SurahDetailScreen';
@@ -19,7 +18,6 @@ function MainAppContent() {
   const { surahs, loading: surahLoading, error: surahError } = useSurahList();
   const { playSurah } = useAudio();
 
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
 
   // Dark Mode State
@@ -75,9 +73,9 @@ function MainAppContent() {
       case 'surah':
         return activeSurahMeta ? `Surah ${activeSurahMeta.name}` : "Al-Qur'an";
       case 'bookmarks':
-        return 'Ayat & Surah Tersimpan';
+        return 'Bookmarks';
       case 'audio':
-        return 'Pemutar Audio';
+        return 'Audio Player';
       case 'settings':
         return 'Pengaturan';
       default:
@@ -98,12 +96,11 @@ function MainAppContent() {
 
   return (
     <div className="min-h-screen bg-background text-on-background flex flex-col transition-colors duration-200">
-      {/* Top App Bar Dinamis (Mobile Header + Desktop Navigation Bar Terpadu) */}
+      {/* Top App Bar Dinamis (Satu Header Bersih Tanpa Hamburger Duplikat) */}
       <Header
         title={headerTitle}
         showBack={route.path === 'surah'}
         onBack={() => navigate('home')}
-        onMenu={() => setIsDrawerOpen(true)}
         onSearch={handleHeaderSearch}
         currentRoute={route.path}
         onNavigate={(path) => navigate(path)}
@@ -156,21 +153,10 @@ function MainAppContent() {
         <MiniPlayer onOpenPlayer={() => navigate('audio')} />
       )}
 
-      {/* Bottom Navigation Bar: Khusus Layar Smartphone (< md), di Desktop otomatis beralih ke Header Nav */}
+      {/* Bottom Navigation Bar: Satu-satunya Navigasi Utama di Ponsel (< md) */}
       <BottomNav
         activeTab={route.path}
         onTabChange={(path) => navigate(path)}
-      />
-
-      {/* Quick Menu Drawer (Akses cepat mobile) */}
-      <DrawerMenu
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-        currentRoute={route.path}
-        onNavigate={(targetPath) => navigate(targetPath)}
-        darkMode={darkMode}
-        onToggleDarkMode={toggleDarkMode}
-        onOpenAbout={() => setShowAboutModal(true)}
       />
 
       {/* Shared About Modal */}
