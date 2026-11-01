@@ -17,7 +17,7 @@ import { APP_CONFIG } from './config/app';
 function MainAppContent() {
   const { route, navigate } = useRouter();
   const { surahs, loading: surahLoading, error: surahError } = useSurahList();
-  const { playSurah, currentSurah, isPlaying } = useAudio();
+  const { playSurah } = useAudio();
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
@@ -75,11 +75,11 @@ function MainAppContent() {
       case 'surah':
         return activeSurahMeta ? `Surah ${activeSurahMeta.name}` : "Al-Qur'an";
       case 'bookmarks':
-        return 'Saved Verses';
+        return 'Ayat & Surah Tersimpan';
       case 'audio':
-        return 'Now Playing';
+        return 'Pemutar Audio';
       case 'settings':
-        return 'Settings';
+        return 'Pengaturan';
       default:
         return APP_CONFIG.name;
     }
@@ -89,7 +89,7 @@ function MainAppContent() {
   const handleHeaderSearch = () => {
     navigate('home');
     setTimeout(() => {
-      const searchInput = document.querySelector('input[placeholder*="Search"]');
+      const searchInput = document.querySelector('input[placeholder*="Cari"]');
       if (searchInput) {
         searchInput.focus();
       }
@@ -97,89 +97,87 @@ function MainAppContent() {
   };
 
   return (
-    // Outer canvas untuk layar lebar: di tengah dengan latar polos netral
-    <div className="min-h-screen bg-neutral-200 dark:bg-neutral-950 flex justify-center items-center sm:py-6 sm:px-4 transition-colors duration-200">
-      {/* Phone container selebar 430px */}
-      <div className="w-full max-w-[430px] h-[100dvh] sm:h-[860px] bg-background text-on-background flex flex-col sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative border-x border-outline-variant/20 transition-colors duration-200">
-        
-        {/* Top App Bar Dinamis */}
-        <Header
-          title={headerTitle}
-          showBack={route.path === 'surah'}
-          onBack={() => navigate('home')}
-          onMenu={() => setIsDrawerOpen(true)}
-          onSearch={handleHeaderSearch}
-        />
+    <div className="min-h-screen bg-background text-on-background flex flex-col transition-colors duration-200">
+      {/* Top App Bar Dinamis (Mobile Header + Desktop Navigation Bar Terpadu) */}
+      <Header
+        title={headerTitle}
+        showBack={route.path === 'surah'}
+        onBack={() => navigate('home')}
+        onMenu={() => setIsDrawerOpen(true)}
+        onSearch={handleHeaderSearch}
+        currentRoute={route.path}
+        onNavigate={(path) => navigate(path)}
+        darkMode={darkMode}
+        onToggleDarkMode={toggleDarkMode}
+      />
 
-        {/* Scrollable View Content di dalam frame ponsel */}
-        <div className="flex-1 overflow-y-auto no-scrollbar">
-          {route.path === 'home' && (
-            <HomeScreen
-              surahs={surahs}
-              loading={surahLoading}
-              error={surahError}
-              onSelectSurah={(id) => navigate('surah', { id })}
-              onNavigate={navigate}
-            />
-          )}
-
-          {route.path === 'surah' && (
-            <SurahDetailScreen
-              surahNumber={route.params.id}
-              onBack={() => navigate('home')}
-              fontSize={fontSize}
-            />
-          )}
-
-          {route.path === 'bookmarks' && (
-            <BookmarksScreen
-              onOpenSurah={(id) => navigate('surah', { id })}
-              onPlayVerse={(surah) => playSurah(surah)}
-            />
-          )}
-
-          {route.path === 'audio' && (
-            <AudioPlayerScreen />
-          )}
-
-          {route.path === 'settings' && (
-            <SettingsScreen
-              darkMode={darkMode}
-              onToggleDarkMode={toggleDarkMode}
-              fontSize={fontSize}
-              onFontSizeChange={handleFontSizeChange}
-            />
-          )}
-        </div>
-
-        {/* Mini Player Bar: Muncul saat berpindah screen lain dan audio aktif */}
-        {route.path !== 'audio' && (
-          <MiniPlayer onOpenPlayer={() => navigate('audio')} />
+      {/* Main View Area: Responsif Penuh (Mobile-first hingga Desktop Wide) */}
+      <div className="flex-1 w-full flex flex-col">
+        {route.path === 'home' && (
+          <HomeScreen
+            surahs={surahs}
+            loading={surahLoading}
+            error={surahError}
+            onSelectSurah={(id) => navigate('surah', { id })}
+          />
         )}
 
-        {/* Bottom Navigation Bar terpasang tepat di dasar frame ponsel */}
-        <BottomNav
-          activeTab={route.path}
-          onTabChange={(path) => navigate(path)}
-        />
+        {route.path === 'surah' && (
+          <SurahDetailScreen
+            surahNumber={route.params.id}
+            onBack={() => navigate('home')}
+            fontSize={fontSize}
+          />
+        )}
 
-        {/* Quick Menu Drawer */}
-        <DrawerMenu
-          isOpen={isDrawerOpen}
-          onClose={() => setIsDrawerOpen(false)}
-          currentRoute={route.path}
-          onNavigate={(targetPath) => navigate(targetPath)}
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
-          onOpenAbout={() => setShowAboutModal(true)}
-        />
+        {route.path === 'bookmarks' && (
+          <BookmarksScreen
+            onOpenSurah={(id) => navigate('surah', { id })}
+            onPlayVerse={(surah) => playSurah(surah)}
+          />
+        )}
 
-        {/* Shared About Modal */}
-        <AboutModal
-          isOpen={showAboutModal}
-          onClose={() => setShowAboutModal(false)}
-        />
+        {route.path === 'audio' && (
+          <AudioPlayerScreen />
+        )}
+
+        {route.path === 'settings' && (
+          <SettingsScreen
+            darkMode={darkMode}
+            onToggleDarkMode={toggleDarkMode}
+            fontSize={fontSize}
+            onFontSizeChange={handleFontSizeChange}
+          />
+        )}
       </div>
+
+      {/* Mini Player Bar: Muncul saat berpindah screen lain dan audio aktif */}
+      {route.path !== 'audio' && (
+        <MiniPlayer onOpenPlayer={() => navigate('audio')} />
+      )}
+
+      {/* Bottom Navigation Bar: Khusus Layar Smartphone (< md), di Desktop otomatis beralih ke Header Nav */}
+      <BottomNav
+        activeTab={route.path}
+        onTabChange={(path) => navigate(path)}
+      />
+
+      {/* Quick Menu Drawer (Akses cepat mobile) */}
+      <DrawerMenu
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        currentRoute={route.path}
+        onNavigate={(targetPath) => navigate(targetPath)}
+        darkMode={darkMode}
+        onToggleDarkMode={toggleDarkMode}
+        onOpenAbout={() => setShowAboutModal(true)}
+      />
+
+      {/* Shared About Modal */}
+      <AboutModal
+        isOpen={showAboutModal}
+        onClose={() => setShowAboutModal(false)}
+      />
     </div>
   );
 }

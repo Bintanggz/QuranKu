@@ -34,7 +34,7 @@ export default function BookmarksScreen({ onOpenSurah, onPlayVerse }) {
   const savedSurahs = bookmarks.filter((b) => b.type === 'surah');
 
   return (
-    <main className="max-w-screen-xl mx-auto px-container-margin pt-6 pb-8">
+    <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 pb-12">
       {/* Header Section */}
       <div className="mb-6">
         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-1.5 block font-semibold">
@@ -68,11 +68,11 @@ export default function BookmarksScreen({ onOpenSurah, onPlayVerse }) {
         })}
       </div>
 
-      {/* Bookmarks Grid */}
+      {/* Bookmarks Section */}
       <div className="space-y-4">
         {/* Rekomendasi Al-Kahf (Khusus Hari Jumat / Rekomendasi Tilawah) */}
         {(activeFilter === 'all' || activeFilter === 'surahs') && savedSurahs.length === 0 && (
-          <div className="bg-primary-container text-white rounded-lg p-inner-padding relative overflow-hidden shadow-xl border border-[#D4AF37]/20">
+          <div className="bg-primary-container text-white rounded-2xl p-5 sm:p-6 relative overflow-hidden shadow-xl border border-[#D4AF37]/20">
             <div className="absolute -right-12 -bottom-12 opacity-10 pointer-events-none">
               <span className="material-symbols-outlined text-[180px]">auto_stories</span>
             </div>
@@ -96,18 +96,13 @@ export default function BookmarksScreen({ onOpenSurah, onPlayVerse }) {
                   Disunnahkan membaca Surah Al-Kahf pada hari Jumat untuk mendapatkan pancaran cahaya di antara dua Jumat.
                 </p>
               </div>
-              <div className="flex flex-row md:flex-col gap-2.5 shrink-0">
+              <div className="shrink-0">
                 <button
                   onClick={() => onOpenSurah(18)}
-                  className="bg-white text-primary px-6 py-2 rounded-full font-label-sm text-xs font-bold shadow-md hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+                  className="bg-white text-primary px-6 py-2.5 rounded-full font-label-sm text-xs font-bold shadow-md hover:bg-emerald-50 active:scale-95 transition-all cursor-pointer inline-flex items-center gap-2"
                 >
-                  Baca Sekarang
-                </button>
-                <button
-                  onClick={() => onOpenSurah(18)}
-                  className="bg-primary text-white border border-white/20 px-6 py-2 rounded-full font-label-sm text-xs font-bold hover:bg-primary-container transition-colors cursor-pointer"
-                >
-                  Detail
+                  <span>Baca Surah Al-Kahf</span>
+                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </button>
               </div>
             </div>
@@ -135,8 +130,9 @@ export default function BookmarksScreen({ onOpenSurah, onPlayVerse }) {
           </div>
         )}
 
-        {/* Daftar Kartu Ayat & Surah Tersimpan */}
-        {displayedBookmarks.map((bm) => {
+        {/* Daftar Kartu Ayat & Surah Tersimpan dalam Grid Responsif */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {displayedBookmarks.map((bm) => {
           // Kartu Surah Penuh
           if (bm.type === 'surah') {
             return (
@@ -276,6 +272,7 @@ export default function BookmarksScreen({ onOpenSurah, onPlayVerse }) {
             </div>
           );
         })}
+        </div>
       </div>
     </main>
   );
